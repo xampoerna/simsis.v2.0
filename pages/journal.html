@@ -52,46 +52,24 @@
                             <span class="links_name">Beranda</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="kelola_profil.html" id="profil" class="text-white">
+                            <i class="bx bxs-user-detail h-14 text-2xl text-center"></i>
+                            <span class="links_name">Kelola Profil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="prestasi.html" id="prestasi" class="text-white">
+                            <i class="bx bx-trophy h-14 text-2xl text-center"></i>
+                            <span class="links_name">Data Prestasi</span>
+                        </a>
+                    </li>
                     <li id="button1" class="bg-menus rounded-lg">
                         <button
                             type="button"
                             class="links_name flex items-center w-full pr-1 m-auto text-base font-normal text-white transition duration-75 rounded-lg group hover:bg-white hover:text-menus"
-                            aria-controls="dropdown-example1"
-                            data-collapse-toggle="dropdown-example1"
-                        >
-                            <i class="bx bx-user text-white h-14 text-2xl text-center"></i>
-                            <span class="links_name flex-1 text-left whitespace-nowrap" sidebar-toggle-item>User</span>
-                            <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"
-                                ></path>
-                            </svg>
-                        </button>
-                        <ul id="dropdown-example1" class="hidden py-2 space-y-2">
-                            <li>
-                                <a
-                                    href="kelola_profil.html"
-                                    class="links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
-                                    >Kelola Profil</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="prestasi.html"
-                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
-                                    >Data Prestasi</a
-                                >
-                            </li>
-                        </ul>
-                    </li>
-                    <li id="button2" class="bg-menus rounded-lg">
-                        <button
-                            type="button"
-                            class="links_name flex items-center w-full pr-1 m-auto text-base font-normal text-white transition duration-75 rounded-lg group hover:bg-white hover:text-menus"
-                            aria-controls="dropdown-example2"
-                            data-collapse-toggle="dropdown-example2"
+                            aria-controls="dropdown1"
+                            data-collapse-toggle="dropdown1"
                         >
                             <i class="bx bx-medal text-white h-14 text-2xl text-center"></i>
                             <span class="links_name flex-1 text-left whitespace-nowrap" sidebar-toggle-item>Program MBKM</span>
@@ -103,7 +81,7 @@
                                 ></path>
                             </svg>
                         </button>
-                        <ul id="dropdown-example2" class="hidden py-2 space-y-2">
+                        <ul id="dropdown1" class="hidden py-2 space-y-2">
                             <li>
                                 <a
                                     href="kampus_mengajar.html"
@@ -170,14 +148,14 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="dosen_pa.html" id="openSide">
-                            <i class="bx bx-user-plus text-white h-14 text-2xl text-center"></i>
-                            <span class="links_name text-white">Dosen PA</span>
+                        <a href="dosen_pa.html" id="dosen" class="text-white">
+                            <i class="bx bxs-user-rectangle h-14 text-2xl text-center"></i>
+                            <span class="links_name">Dosen PA</span>
                         </a>
                     </li>
                     <li>
                         <a href="journal.html" id="journal" class="active">
-                            <i class="bx bx-book h-14 text-2xl text-center"></i>
+                            <i class="bx bx-bookmark-alt h-14 text-2xl text-center"></i>
                             <span class="links_name">Tugas Akhir/Jurnal</span>
                         </a>
                     </li>
@@ -185,8 +163,8 @@
             </div>
             <!-- Sidebar End -->
 
-            <!-- Section Start -->
-            <section class="home-section content">
+            <!-- Main Section Start -->
+            <main class="home-section content">
                 <!-- Navbar Start -->
                 <nav class="bg-secondary border-b-4 rounded-b-lg border-gray-300 dark:bg-gray-900">
                     <div class="flex flex-wrap justify-between items-center mx-auto p-4">
@@ -232,24 +210,94 @@
                 <!-- Navbar End -->
 
                 <!-- Section Content Start -->
-                <div class="w-full md:w-11/12 mx-auto">
+                <section class="w-full md:w-11/12 mx-auto">
                     <!-- Back Beranda Start -->
-                    <div class="my-3 p-4 font-medium rounded-t-lg rounded-b-md border-b-2 border-gray-300">
-                        <div class="">
-                            <a href="../index.html" class="text-primary hover:text-black">Mahasiswa</a>
-                            <span>| Politeknik Piksi Ganesha |</span>
-                            <a href="journal.html" class="text-secondary hover:text-black">Journal</a>
-                        </div>
+                    <div class="mt-3 mb-5 p-4 font-medium rounded-t-lg rounded-b-md border-b-2 border-gray-300">
+                        <a href="../index.html" class="text-primary hover:text-black">Mahasiswa</a>
+                        <span>| Politeknik Piksi Ganesha |</span>
+                        <a href="journal.html" class="text-secondary hover:text-black">Tugas Akhir/Jurnal</a>
                     </div>
                     <!-- Back Beranda End -->
 
-                    <!-- Content Start -->
-                    <div class="w-full my-10"></div>
-                    <!-- Content End -->
-                </div>
+                    <section class="mb-10 p-7 border border-gray-200 rounded-xl shadow-lg">
+                        <!-- Content Start -->
+                        <div class="w-full font-medium mb-5">
+                            <span id="tugas-akhir-link" class="text-primary hover:text-black cursor-pointer">Tugas Akhir</span>
+                            <span> | </span>
+                            <span id="jurnal-link" class="text-secondary hover:text-black cursor-pointer">Jurnal</span>
+                            <hr class="mt-3" />
+                        </div>
+
+                        <div id="tugas-akhir-content" class="block">
+                            <!-- Isi konten tugas akhir -->
+                            <p>Silakan Upload Tugas Akhir Anda disini</p>
+                            <div class="title1 my-3">
+                                <label for="title1" class="mb-3 text-sm font-medium text-gray-900">Judul Tugas Akhir</label>
+                                <input id="title1" type="text" class="block p-2.5 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary" />
+                            </div>
+                            <div class="file">
+                                <label for="file" class="mb-3 text-sm font-medium text-gray-900">Upload File Dokumen</label>
+                                <input
+                                    class="block p-2.5 w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:ring-secondary"
+                                    aria-describedby="user_avatar_help"
+                                    id="user_avatar1"
+                                    type="file"
+                                />
+                            </div>
+                            <div class="flex flex-wrap justify-end mt-7">
+                                <button
+                                    type="submit"
+                                    class="mt-3 p-2 w-20 md:w-32 font-medium bg-secondary text-white rounded-lg hover:font-semibold hover:shadow-lg hover:underline"
+                                >
+                                    Simpan
+                                </button>
+                                <button
+                                    type="reset"
+                                    id="reset-button1"
+                                    class="mx-2 mt-3 p-2 w-20 md:w-32 font-medium bg-primary text-white rounded-lg hover:font-semibold hover:shadow-lg hover:underline"
+                                >
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="jurnal-content" class="hidden">
+                            <!-- Isi konten jurnal -->
+                            <p>Silakan Upload Jurnal Anda disini</p>
+                            <div class="title2 my-3">
+                                <label for="title2" class="mb-3 text-sm font-medium text-gray-900">Judul Jurnal</label>
+                                <input id="title2" type="text" class="block p-2.5 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary" />
+                            </div>
+                            <div class="pubs my-3">
+                                <label for="pubs" class="mb-3 text-sm font-medium text-gray-900">Publikasi Jurnal</label>
+                                <input id="pubs" type="text" class="block p-2.5 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary" />
+                            </div>
+                            <div class="url my-3">
+                                <label for="url" class="mb-3 text-sm font-medium text-gray-900">URL Jurnal</label>
+                                <input id="url" type="url" class="block p-2.5 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary" />
+                            </div>
+                            <div class="flex flex-wrap justify-end mt-7">
+                                <button
+                                    type="submit"
+                                    class="mt-3 p-2 w-20 md:w-32 font-medium bg-secondary text-white rounded-lg hover:font-semibold hover:shadow-lg hover:underline"
+                                >
+                                    Simpan
+                                </button>
+                                <button
+                                    type="reset"
+                                    id="reset-button2"
+                                    class="mx-2 mt-3 p-2 w-20 md:w-32 font-medium bg-primary text-white rounded-lg hover:font-semibold hover:shadow-lg hover:underline"
+                                >
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Content End -->
+                    </section>
+                </section>
                 <!-- Section Content End -->
-            </section>
-            <!-- Section End -->
+            </main>
+            <!-- Main Section End -->
 
             <!-- Footer Start -->
             <footer class="home-section flex-shrink-0 border-b-2 border-gray-300 bg-secondary p-4 rounded-t-md">
@@ -264,5 +312,5 @@
         </div>
     </body>
     <script src="../script.js"></script>
-    <script src="https://unpkg.com/flowbite@1.3.4/dist/flowbite.js"></script>
+    <script src="../action.js"></script>
 </html>

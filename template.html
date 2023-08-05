@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- Tailwind CDN -->
@@ -12,8 +11,8 @@
         <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
 
         <!-- CSS Style -->
-        <link rel="stylesheet" href="../style.css" />
-        <link rel="shortcut icon" href="../media/favicon/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="media/favicon/favicon.ico" type="image/x-icon" />
 
         <script>
             tailwind.config = {
@@ -29,239 +28,227 @@
             };
         </script>
 
-        <title>PORTAL MAHASISWA</title>
+        <title>Fitur Test</title>
     </head>
     <body>
-        <div class="container mx-auto">
-            <!-- Sidebar Start -->
-            <div class="sidebar fixed left-0 top-0 h-full w-20 bg-primary px-4 z-40 overflow-y-auto overflow-x-hidden">
-                <div class="logo-details h-16 flex items-center relative">
-                    <i class="bx bxl-digitalocean icon text-white h-14 text-2xl text-center"></i>
-                    <div class="logo_name text-white text-xl font-bold">Mahasiswa</div>
-                    <i class="bx bx-menu absolute top-2/4 right-0 text-2xl cursor-pointer text-center text-white" id="btn"></i>
-                </div>
-                <hr />
-                <ul class="space-y-2 my-4">
-                    <li>
-                        <i class="bx bx-search text-white h-14 text-2xl text-center"></i>
-                        <input type="text" placeholder="Search..." />
-                    </li>
-                    <li>
-                        <a href="#" id="beranda" class="text-white">
-                            <i class="bx bx-home-alt h-14 text-2xl text-center"></i>
-                            <span class="links_name">Beranda</span>
-                        </a>
-                    </li>
-                    <li id="button1" class="bg-menus rounded-lg">
-                        <button
-                            type="button"
-                            class="links_name flex items-center w-full pr-1 m-auto text-base font-normal text-white transition duration-75 rounded-lg group hover:bg-white hover:text-menus"
-                            aria-controls="dropdown-example1"
-                            data-collapse-toggle="dropdown-example1"
-                        >
-                            <i class="bx bx-user text-white h-14 text-2xl text-center"></i>
-                            <span class="links_name flex-1 text-left whitespace-nowrap" sidebar-toggle-item>User</span>
-                            <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"
-                                ></path>
-                            </svg>
-                        </button>
-                        <ul id="dropdown-example1" class="hidden py-2 space-y-2">
-                            <li>
-                                <a
-                                    href="#"
-                                    class="active links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
-                                    >Kelola Profil</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
-                                    >Data Prestasi</a
-                                >
-                            </li>
-                        </ul>
-                    </li>
-                    <li id="button2" class="bg-menus rounded-lg">
-                        <button
-                            type="button"
-                            class="links_name flex items-center w-full pr-1 m-auto text-base font-normal text-white transition duration-75 rounded-lg group hover:bg-white hover:text-menus"
-                            aria-controls="dropdown-example2"
-                            data-collapse-toggle="dropdown-example2"
-                        >
-                            <i class="bx bx-medal text-white h-14 text-2xl text-center"></i>
-                            <span class="links_name flex-1 text-left whitespace-nowrap" sidebar-toggle-item>Program MBKM</span>
-                            <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"
-                                ></path>
-                            </svg>
-                        </button>
-                        <ul id="dropdown-example2" class="hidden py-2 space-y-2">
-                            <li>
-                                <a
-                                    href="#"
-                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
-                                    >Kampus Mengajar</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
-                                    >Magang</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
-                                    >Studi Independen</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
-                                    >Pertukaran Mahasiswa Merdeka</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
-                                    >Wirausaha Merdeka</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
-                                    >Indonesian International Student Mobility Awards</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
-                                    >Praktisi Mengajar</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
-                                    >Bangkit by Google, GoTo, and Traveloka</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
-                                    >Kementerian ESDM - GERILYA</a
-                                >
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" id="openSide">
-                            <i class="bx bx-user-plus text-white h-14 text-2xl text-center"></i>
-                            <span class="links_name text-white">Dosen PA</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" id="journal">
-                            <i class="bx bx-book text-white h-14 text-2xl text-center"></i>
-                            <span class="links_name text-white">Journal</span>
-                        </a>
-                    </li>
-                </ul>
+        <div class="sidebar fixed left-0 top-0 h-full w-20 bg-primary px-4 z-40 overflow-y-auto overflow-x-hidden">
+            <div class="logo-details h-16 flex items-center relative">
+                <i class="bx bxl-digitalocean icon text-white h-14 text-2xl text-center"></i>
+                <div class="logo_name text-white text-xl font-bold">Mahasiswa</div>
+                <i class="bx bx-menu absolute top-2/4 right-0 text-2xl cursor-pointer text-center text-white" id="btn"></i>
             </div>
-            <!-- Sidebar End -->
-
-            <!-- Section Start -->
-            <section class="home-section content">
-                <!-- Navbar Start -->
-                <nav class="bg-secondary border-b-4 rounded-b-lg border-gray-300 dark:bg-gray-900">
-                    <div class="flex flex-wrap justify-between items-center mx-auto p-4">
-                        <a href="#" class="flex items-center">
-                            <img src="media/piksi.png" class="h-8 p-0.5 border border-white rounded-full mr-1 hover:bg-primary md:mx-2 md:h-10 md:mr-2" alt="SIM Logo" />
-                            <span class="self-center text-xl md:text-2xl font-semibold whitespace-nowrap text-white">
-                                <span class="hidden sm:inline">SIM Mahasiswa</span>
-                                <span class="sm:hidden font-bold">SIM SIS</span>
-                            </span>
-                        </a>
-                        <div class="flex items-center">
-                            <div class="time flex text-center">
-                                <div class="display-date px-3 py-1 text-white rounded-md mx-2 cursor-pointer">
-                                    <div class="calender hidden md:block">
-                                        <span id="day">day</span>,
-                                        <span id="daynum">00</span>
-                                        <span id="month">month</span>
-                                        <span id="year">0000</span>
-                                    </div>
-                                    <span class="display-time text-sm md:text-base"></span>
-                                </div>
-                            </div>
-                            <div class="login-user p-0.5 ml-0 md:ml-2 border border-white rounded-full hover:bg-primary cursor-pointer">
-                                <span id="userPic" class="text-sm md:text-base text-white"><img src="media/huh.jpg" alt="userPic" class="rounded-full h-8 md:h-10" /></span>
-                                <div id="menuContainer" class="hidden absolute right-0 mt-2 bg-white border border-gray-300 rounded-md shadow-xl z-10">
-                                    <ul class="py-1 bg-primary rounded-md">
-                                        <li>
-                                            <a href="#" class="block text-sm text-white px-4 py-2 rounded-md hover:bg-white hover:text-menus"
-                                                ><span class="bx bx-key"></span> Change Password</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a href="#" class="block text-sm text-white px-4 py-2 rounded-md hover:bg-white hover:text-menus"
-                                                ><span class="bx bxs-log-out"></span> Logout</a
-                                            >
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <!-- Navbar End -->
-
-                <!-- Section Content Start -->
-                <div class="w-full md:w-11/12 mx-auto">
-                    <!-- Back Beranda Start -->
-                    <div class="my-3 p-4 font-medium rounded-t-lg rounded-b-md border-b-2 border-gray-300">
-                        <div class="">
-                            <a href="index.html" class="text-primary hover:text-black">Mahasiswa</a>
-                            <span>| Politeknik Piksi Ganesha</span>
-                        </div>
-                    </div>
-                    <!-- Back Beranda End -->
-
-                    <!-- Content Start -->
-                    <div class="w-full my-10"></div>
-                    <!-- Content End -->
-                </div>
-                <!-- Section Content End -->
-            </section>
-            <!-- Section End -->
-
-            <!-- Footer Start -->
-            <footer class="home-section flex-shrink-0 border-b-2 border-gray-300 bg-secondary p-4 rounded-t-md">
-                <p class="text-sm md:text-base text-white text-center font-medium">
-                    Copyright &copy; 2023 |
-                    <a href="https://piksi.ac.id/" class="text-primary hover:text-white" target="_blank" rel="noopener noreferrer">Politeknik Piksi Ganesha</a>. All Rights
-                    Reserved. Designed by
-                    <a href="#" class="text-primary hover:text-white" target="_blank" rel="noopener noreferrer">SIM SIS Team Project</a>
-                </p>
-            </footer>
-            <!-- Footer End -->
+            <hr />
+            <ul class="space-y-2 my-4">
+                <li>
+                    <i class="bx bx-search text-white h-14 text-2xl text-center"></i>
+                    <input type="text" placeholder="Search..." />
+                </li>
+                <li>
+                    <a href="index.html" id="beranda" class="active">
+                        <i class="bx bx-home-alt h-14 text-2xl text-center"></i>
+                        <span class="links_name">Beranda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pages/kelola_profil.html" id="profil">
+                        <i class="bx bxs-user-detail text-white h-14 text-2xl text-center"></i>
+                        <span class="links_name text-white">Kelola Profil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pages/prestasi.html" id="prestasi">
+                        <i class="bx bx-trophy text-white h-14 text-2xl text-center"></i>
+                        <span class="links_name text-white">Data Prestasi</span>
+                    </a>
+                </li>
+                <li id="button1" class="bg-menus rounded-lg">
+                    <button
+                        type="button"
+                        class="links_name flex items-center w-full pr-1 m-auto text-base font-normal text-white transition duration-75 rounded-lg group hover:bg-white hover:text-menus"
+                        aria-controls="dropdown1"
+                        data-collapse-toggle="dropdown1"
+                    >
+                        <i class="bx bx-medal text-white h-14 text-2xl text-center"></i>
+                        <span class="links_name flex-1 text-left whitespace-nowrap" sidebar-toggle-item>Program MBKM</span>
+                        <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"
+                            ></path>
+                        </svg>
+                    </button>
+                    <ul id="dropdown1" class="hidden py-2 space-y-2">
+                        <li>
+                            <a
+                                href="pages/kampus_mengajar.html"
+                                class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
+                                >Kampus Mengajar</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="pages/magang.html"
+                                class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
+                                >Magang</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="pages/studi_independen.html"
+                                class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
+                                >Studi Independen</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="pages/pertukaran_mahasiswa.html"
+                                class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
+                                >Pertukaran Mahasiswa Merdeka</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="pages/wirausaha.html"
+                                class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
+                                >Wirausaha Merdeka</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="pages/iisma.html"
+                                class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
+                                >Indonesian International Student Mobility Awards</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="pages/praktisi_mengajar.html"
+                                class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
+                                >Praktisi Mengajar</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="pages/bangkit.html"
+                                class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
+                                >Bangkit by Google, GoTo, and Traveloka</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="pages/gerilya.html"
+                                class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
+                                >Kementerian ESDM - GERILYA</a
+                            >
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="pages/dosen_pa.html" id="dosen">
+                        <i class="bx bxs-user-rectangle text-white h-14 text-2xl text-center"></i>
+                        <span class="links_name text-white">Dosen PA</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pages/journal.html" id="journal">
+                        <i class="bx bx-bookmark-alt text-white h-14 text-2xl text-center"></i>
+                        <span class="links_name text-white">Tugas Akhir/Jurnal</span>
+                    </a>
+                </li>
+            </ul>
         </div>
+        <script>
+            const sidebar = document.querySelector(".sidebar");
+            const closeBtn = document.querySelector("#btn");
+            const searchBtn = document.querySelector(".bx-search");
+            const itemMenus1 = document.querySelector("#button1");
+            const berandaOpen = document.querySelector("#beranda");
+            const profilOpen = document.getElementById("profil");
+            const prestasiOpen = document.getElementById("prestasi");
+            const dosenOpen = document.querySelector("#dosen");
+            const journalOpen = document.querySelector("#journal");
+            const links = document.querySelectorAll(".links_name");
+            const dropdowns = document.querySelectorAll("[data-collapse-toggle]");
+            let sidebarOpen = false;
+
+            function menuBtnChange() {
+                if (sidebar.classList.contains("open")) {
+                    closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+                } else {
+                    closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+                }
+            }
+            function toggleSidebar() {
+                sidebar.classList.toggle("open");
+                menuBtnChange();
+            }
+
+            function closeSidebar() {
+                sidebarOpen = false;
+                sidebar.classList.remove("open");
+                menuBtnChange();
+            }
+
+            // Add event listener to the close button
+            closeBtn.addEventListener("click", toggleSidebar);
+
+            // Add event listeners to links and dropdowns
+            links.forEach((link) => {
+                link.addEventListener("click", closeSidebar);
+            });
+
+            itemMenus1.addEventListener("click", (event) => {
+                event.stopPropagation();
+                sidebarOpen = true; // Set sidebarOpen ke true saat mengklik itemMenus1
+                sidebar.classList.add("open");
+                menuBtnChange();
+            });
+
+            dropdowns.forEach((dropdown) => {
+                const targetId = dropdown.getAttribute("data-collapse-toggle");
+                const targetDropdown = document.getElementById(targetId);
+
+                dropdown.addEventListener("click", () => {
+                    targetDropdown.classList.toggle("hidden");
+                });
+            });
+
+            // Sidebar open functions
+            function openSidebar() {
+                sidebarOpen = true;
+                sidebar.classList.add("open");
+                menuBtnChange();
+            }
+
+            berandaOpen.addEventListener("mouseenter", openSidebar);
+            profilOpen.addEventListener("mouseenter", openSidebar);
+            prestasiOpen.addEventListener("mouseenter", openSidebar);
+            dosenOpen.addEventListener("mouseenter", openSidebar);
+            journalOpen.addEventListener("mouseenter", openSidebar);
+
+            // Close sidebar when clicking outside the sidebar
+            document.addEventListener("mousemove", (event) => {
+                const isMouseOutsideSidebar =
+                    !sidebar.contains(event.target) &&
+                    !berandaOpen.contains(event.target) &&
+                    !profilOpen.contains(event.target) &&
+                    !prestasiOpen.contains(event.target) &&
+                    !dosenOpen.contains(event.target) &&
+                    !journalOpen.contains(event.target);
+
+                if (isMouseOutsideSidebar && !sidebarOpen) {
+                    closeSidebar();
+                }
+            });
+
+            // Handle search button click
+            searchBtn.addEventListener("click", () => {
+                sidebarOpen = !sidebarOpen;
+                toggleSidebar();
+            });
+        </script>
     </body>
-    <script src="../script.js"></script>
-    <script src="https://unpkg.com/flowbite@1.3.4/dist/flowbite.js"></script>
+    <!-- <script src="script.js"></script>
+    <script src="https://unpkg.com/flowbite@1.3.4/dist/flowbite.js"></script> -->
 </html>

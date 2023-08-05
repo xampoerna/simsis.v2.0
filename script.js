@@ -51,14 +51,18 @@ document.addEventListener("click", function (event) {
     }
 });
 
-let sidebar = document.querySelector(".sidebar");
-let closeBtn = document.querySelector("#btn");
-let searchBtn = document.querySelector(".bx-search");
-let itemMenus1 = document.querySelector("#button1");
-let itemMenus2 = document.querySelector("#button2");
-let openSide = document.querySelector("#openSide");
-let berandaOpen = document.querySelector("#beranda");
-let journalOpen = document.querySelector("#journal");
+// Sidebar Function
+const sidebar = document.querySelector(".sidebar");
+const closeBtn = document.querySelector("#btn");
+const searchBtn = document.querySelector(".bx-search");
+const itemMenus1 = document.querySelector("#button1");
+const berandaOpen = document.querySelector("#beranda");
+const profilOpen = document.getElementById("profil");
+const prestasiOpen = document.getElementById("prestasi");
+const dosenOpen = document.querySelector("#dosen");
+const journalOpen = document.querySelector("#journal");
+const links = document.querySelectorAll(".links_name");
+const dropdowns = document.querySelectorAll("[data-collapse-toggle]");
 let sidebarOpen = false;
 
 function menuBtnChange() {
@@ -68,10 +72,9 @@ function menuBtnChange() {
         closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
     }
 }
-
-function openSidebar() {
-    sidebarOpen = true;
-    sidebar.classList.add("open");
+            
+function toggleSidebar() {
+    sidebar.classList.toggle("open");
     menuBtnChange();
 }
 
@@ -81,39 +84,62 @@ function closeSidebar() {
     menuBtnChange();
 }
 
-closeBtn.addEventListener("click", () => {
-    sidebarOpen = !sidebarOpen;
-    sidebar.classList.toggle("open");
-    menuBtnChange();
-});
+// Add event listener to the close button
+closeBtn.addEventListener("click", toggleSidebar);
 
-searchBtn.addEventListener("click", () => {
-    sidebarOpen = !sidebarOpen; // Toggle sidebarOpen saat mengklik ikon pencarian
-    sidebar.classList.toggle("open");
-    menuBtnChange();
+// Add event listeners to links and dropdowns
+links.forEach((link) => {
+    link.addEventListener("click", closeSidebar);
 });
 
 itemMenus1.addEventListener("click", (event) => {
     event.stopPropagation();
     sidebarOpen = true; // Set sidebarOpen ke true saat mengklik itemMenus1
     sidebar.classList.add("open");
+    menuBtnChange();
 });
 
-itemMenus2.addEventListener("click", (event) => {
-    event.stopPropagation();
-    sidebarOpen = true; // Set sidebarOpen ke true saat mengklik itemMenus2
+dropdowns.forEach((dropdown) => {
+    const targetId = dropdown.getAttribute("data-collapse-toggle");
+    const targetDropdown = document.getElementById(targetId);
+
+    dropdown.addEventListener("click", () => {
+        targetDropdown.classList.toggle("hidden");
+    });
+});
+
+// Sidebar open functions
+function openSidebar() {
+    sidebarOpen = true;
     sidebar.classList.add("open");
-});
+    menuBtnChange();
+}
 
-openSide.addEventListener("mouseenter", openSidebar);
 berandaOpen.addEventListener("mouseenter", openSidebar);
+profilOpen.addEventListener("mouseenter", openSidebar);
+prestasiOpen.addEventListener("mouseenter", openSidebar);
+dosenOpen.addEventListener("mouseenter", openSidebar);
 journalOpen.addEventListener("mouseenter", openSidebar);
 
+// Close sidebar when clicking outside the sidebar
 document.addEventListener("mousemove", (event) => {
-    const isMouseOutsideSidebar = !sidebar.contains(event.target) && !openSide.contains(event.target) && !berandaOpen.contains(event.target) && !journalOpen.contains(event.target);
+    const isMouseOutsideSidebar =
+        !sidebar.contains(event.target) &&
+        !berandaOpen.contains(event.target) &&
+        !profilOpen.contains(event.target) &&
+        !prestasiOpen.contains(event.target) &&
+        !dosenOpen.contains(event.target) &&
+        !journalOpen.contains(event.target);
+
     if (isMouseOutsideSidebar && !sidebarOpen) {
         closeSidebar();
     }
+});
+
+// Handle search button click
+searchBtn.addEventListener("click", () => {
+    sidebarOpen = !sidebarOpen;
+    toggleSidebar();
 });
 
 //Carousel Image
@@ -166,3 +192,4 @@ carousel.addEventListener("mouseout", startCarousel);
 
 showSlide(activeIndex);
 startCarousel();
+

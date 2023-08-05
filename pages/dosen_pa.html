@@ -52,46 +52,24 @@
                             <span class="links_name">Beranda</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="kelola_profil.html" id="profil" class="text-white">
+                            <i class="bx bxs-user-detail h-14 text-2xl text-center"></i>
+                            <span class="links_name">Kelola Profil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="prestasi.html" id="prestasi" class="text-white">
+                            <i class="bx bx-trophy h-14 text-2xl text-center"></i>
+                            <span class="links_name">Data Prestasi</span>
+                        </a>
+                    </li>
                     <li id="button1" class="bg-menus rounded-lg">
                         <button
                             type="button"
                             class="links_name flex items-center w-full pr-1 m-auto text-base font-normal text-white transition duration-75 rounded-lg group hover:bg-white hover:text-menus"
-                            aria-controls="dropdown-example1"
-                            data-collapse-toggle="dropdown-example1"
-                        >
-                            <i class="bx bx-user text-white h-14 text-2xl text-center"></i>
-                            <span class="links_name flex-1 text-left whitespace-nowrap" sidebar-toggle-item>User</span>
-                            <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"
-                                ></path>
-                            </svg>
-                        </button>
-                        <ul id="dropdown-example1" class="hidden py-2 space-y-2">
-                            <li>
-                                <a
-                                    href="kelola_profil.html"
-                                    class="links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
-                                    >Kelola Profil</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="prestasi.html"
-                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
-                                    >Data Prestasi</a
-                                >
-                            </li>
-                        </ul>
-                    </li>
-                    <li id="button2" class="bg-menus rounded-lg">
-                        <button
-                            type="button"
-                            class="links_name flex items-center w-full pr-1 m-auto text-base font-normal text-white transition duration-75 rounded-lg group hover:bg-white hover:text-menus"
-                            aria-controls="dropdown-example2"
-                            data-collapse-toggle="dropdown-example2"
+                            aria-controls="dropdown1"
+                            data-collapse-toggle="dropdown1"
                         >
                             <i class="bx bx-medal text-white h-14 text-2xl text-center"></i>
                             <span class="links_name flex-1 text-left whitespace-nowrap" sidebar-toggle-item>Program MBKM</span>
@@ -103,7 +81,7 @@
                                 ></path>
                             </svg>
                         </button>
-                        <ul id="dropdown-example2" class="hidden py-2 space-y-2">
+                        <ul id="dropdown1" class="hidden py-2 space-y-2">
                             <li>
                                 <a
                                     href="kampus_mengajar.html"
@@ -170,14 +148,14 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="dosen_pa.html" id="openSide" class="active">
-                            <i class="bx bx-user-plus h-14 text-2xl text-center"></i>
+                        <a href="dosen_pa.html" id="dosen" class="active">
+                            <i class="bx bxs-user-rectangle h-14 text-2xl text-center"></i>
                             <span class="links_name">Dosen PA</span>
                         </a>
                     </li>
                     <li>
                         <a href="journal.html" id="journal">
-                            <i class="bx bx-book text-white h-14 text-2xl text-center"></i>
+                            <i class="bx bx-bookmark-alt text-white h-14 text-2xl text-center"></i>
                             <span class="links_name text-white">Tugas Akhir/Jurnal</span>
                         </a>
                     </li>
@@ -244,7 +222,48 @@
                     <!-- Back Beranda End -->
 
                     <!-- Content Start -->
-                    <div class="w-full my-10"></div>
+                    <div class="w-full my-3 p-4">
+                        <h2 class="font-medium text-base">Dosen Pembimbing Akademik</h2>
+                        <p class="text-sm mt-2 mb-5">Dosen Pembimbing Akademik Angkatan 2020 - Manajemen Sistem Informasi</p>
+                        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr class="text-center">
+                                        <th scope="col" class="px-6 py-3">No</th>
+                                        <th scope="col" class="px-6 py-3">NIM</th>
+                                        <th scope="col" class="px-6 py-3">Nama Dosen</th>
+                                        <th scope="col" class="px-6 py-3">Narahubung</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-white text-center border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        <td class="px-6 py-4">1</td>
+                                        <td class="px-6 py-4">20402018</td>
+                                        <td class="px-6 py-4">Ir. Johni Pasaribu</td>
+                                        <td class="px-6 py-4">081112233</td>
+                                    </tr>
+                                    <tr class="bg-white text-center border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        <td class="px-6 py-4">2</td>
+                                        <td class="px-6 py-4">20402018</td>
+                                        <td class="px-6 py-4">Budi Chaehabudin</td>
+                                        <td class="px-6 py-4">081112233</td>
+                                    </tr>
+                                    <tr class="bg-white text-center border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        <td class="px-6 py-4">3</td>
+                                        <td class="px-6 py-4">20402018</td>
+                                        <td class="px-6 py-4">Rina Kurniawati</td>
+                                        <td class="px-6 py-4">081112233</td>
+                                    </tr>
+                                    <tr class="bg-white text-center border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        <td class="px-6 py-4">4</td>
+                                        <td class="px-6 py-4">20402018</td>
+                                        <td class="px-6 py-4">Rini Suwartika</td>
+                                        <td class="px-6 py-4">081112233</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                     <!-- Content End -->
                 </div>
                 <!-- Section Content End -->
@@ -264,5 +283,4 @@
         </div>
     </body>
     <script src="../script.js"></script>
-    <script src="https://unpkg.com/flowbite@1.3.4/dist/flowbite.js"></script>
 </html>
