@@ -52,11 +52,39 @@
                             <span class="links_name">Beranda</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="kelola_profil.html" id="profil" class="active">
-                            <i class="bx bxs-user-detail h-14 text-2xl text-center"></i>
-                            <span class="links_name">Kelola Profil</span>
-                        </a>
+                    <li id="button2" class="bg-menus rounded-lg">
+                        <button
+                            type="button"
+                            class="links_name flex items-center w-full pr-1 m-auto text-base font-normal text-white transition duration-75 rounded-lg group hover:bg-white hover:text-menus"
+                            aria-controls="dropdown2"
+                            data-collapse-toggle="dropdown2"
+                        >
+                            <i class="bx bxs-user-detail text-white h-14 text-2xl text-center"></i>
+                            <span class="links_name flex-1 text-left whitespace-nowrap" sidebar-toggle-item>Mahasiswa</span>
+                            <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"
+                                ></path>
+                            </svg>
+                        </button>
+                        <ul id="dropdown2" class="hidden py-2 space-y-2">
+                            <li>
+                                <a
+                                    href="kelola_profil.html"
+                                    class="active flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
+                                    >Kelola Profil</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="kelola_akun.html"
+                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
+                                    >Kelola Akun</a
+                                >
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <a href="prestasi.html" id="prestasi">
@@ -192,8 +220,13 @@
                                 <div id="menuContainer" class="hidden absolute right-0 mt-2 bg-white border border-gray-300 rounded-md shadow-xl z-10">
                                     <ul class="py-1 bg-primary rounded-md">
                                         <li>
-                                            <a href="#" class="block text-sm text-white px-4 py-2 rounded-md hover:bg-white hover:text-menus"
-                                                ><span class="bx bx-key"></span> Change Password</a
+                                            <a href="kelola_profil.html" class="block text-sm text-white px-4 py-2 rounded-md hover:bg-white hover:text-menus"
+                                                ><span class="bx bxs-user-detail"></span> Kelola Profil</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="kelola_akun.html" class="block text-sm text-white px-4 py-2 rounded-md hover:bg-white hover:text-menus"
+                                                ><span class="bx bx-key"></span> Ubah Password</a
                                             >
                                         </li>
                                         <li>

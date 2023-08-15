@@ -56,6 +56,7 @@ const sidebar = document.querySelector(".sidebar");
 const closeBtn = document.querySelector("#btn");
 const searchBtn = document.querySelector(".bx-search");
 const itemMenus1 = document.querySelector("#button1");
+const itemMenus2 = document.querySelector("#button2");
 const berandaOpen = document.querySelector("#beranda");
 const profilOpen = document.getElementById("profil");
 const prestasiOpen = document.getElementById("prestasi");
@@ -99,6 +100,13 @@ itemMenus1.addEventListener("click", (event) => {
     menuBtnChange();
 });
 
+itemMenus2.addEventListener("click", (event) => {
+    event.stopPropagation();
+    sidebarOpen = true; // Set sidebarOpen ke true saat mengklik itemMenus1
+    sidebar.classList.add("open");
+    menuBtnChange();
+});
+
 dropdowns.forEach((dropdown) => {
     const targetId = dropdown.getAttribute("data-collapse-toggle");
     const targetDropdown = document.getElementById(targetId);
@@ -116,7 +124,6 @@ function openSidebar() {
 }
 
 berandaOpen.addEventListener("mouseenter", openSidebar);
-profilOpen.addEventListener("mouseenter", openSidebar);
 prestasiOpen.addEventListener("mouseenter", openSidebar);
 dosenOpen.addEventListener("mouseenter", openSidebar);
 journalOpen.addEventListener("mouseenter", openSidebar);
@@ -141,7 +148,7 @@ searchBtn.addEventListener("click", () => {
     sidebarOpen = !sidebarOpen;
     toggleSidebar();
 });
-
+        
 //Carousel Image
 const carousel = document.querySelector("#default-carousel");
 const items = carousel.querySelectorAll("[data-carousel-item]");
