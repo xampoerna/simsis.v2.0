@@ -73,7 +73,7 @@
                             <li>
                                 <a
                                     href="../pages/kelola_profil.html"
-                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
+                                    class="active flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
                                     >Kelola Profil</a
                                 >
                             </li>
@@ -110,6 +110,13 @@
                             </svg>
                         </button>
                         <ul id="dropdown1" class="hidden py-2 space-y-2">
+                            <li>
+                                <a
+                                    href="../pages/data_mbkm.html"
+                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
+                                    >Data MBKM</a
+                                >
+                            </li>
                             <li>
                                 <a
                                     href="../pages/kampus_mengajar.html"
@@ -184,7 +191,7 @@
                     <li>
                         <a href="../pages/journal.html" id="journal">
                             <i class="bx bx-bookmark-alt text-white h-14 text-2xl text-center"></i>
-                            <span class="links_name text-white">Tugas Akhir/Jurnal</span>
+                            <span class="links_name text-white">TA | Artikel Ilmiah</span>
                         </a>
                     </li>
                 </ul>
@@ -282,7 +289,7 @@
                                         </select>
                                     </div>
                                     <div class="prodi md:mb-5">
-                                        <label for="prodi" class="block mb-2 text-sm font-medium text-gray-900">Prodi</label>
+                                        <label for="prodi" class="block mb-2 text-sm font-medium text-gray-900">Program Studi</label>
                                         <select
                                             id="prodi"
                                             class="overflow-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
@@ -302,24 +309,19 @@
                                             <option>PRODUKSI MEDIA (PME) - [D.IV]</option>
                                         </select>
                                     </div>
-                                    <div class="npm">
-                                        <label for="npm" class="mb-3 text-sm font-medium text-gray-900">NPM</label>
-                                        <input
-                                            class="block p-2.5 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary"
-                                            id=""
-                                            type="text"
-                                        />
-                                    </div>
-                                    <div class="kelas">
-                                        <label for="kelas" class="block mb-2 text-sm font-medium text-gray-900">Kelas</label>
+                                    <div class="program md:mb-5">
+                                        <label for="program" class="block mb-2 text-sm font-medium text-gray-900">Program</label>
                                         <select
-                                            id="kelas"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
+                                            id="program"
+                                            class="overflow-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
                                         >
                                             <option></option>
-                                            <option>TIK-R31/19</option>
-                                            <option>SI-R31/20</option>
-                                            <option>DDL-20/22</option>
+                                            <option>Reguler</option>
+                                            <option>Karyawan</option>
+                                            <option>E-Learning</option>
+                                            <option>Taruna</option>
+                                            <option>Lanjutan</option>
+                                            <option>Lainnya..</option>
                                         </select>
                                     </div>
                                     <div class="semester md:mb-5">
@@ -340,12 +342,48 @@
                                             <option>9 (Sembilan) | Ganjil</option>
                                         </select>
                                     </div>
+                                    <div class="kelas">
+                                        <label for="kelas" class="block mb-2 text-sm font-medium text-gray-900">Kelas</label>
+                                        <select
+                                            id="kelas"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
+                                        >
+                                            <option></option>
+                                            <option>TIK-R31/19</option>
+                                            <option>SI-R31/20</option>
+                                            <option>DDL-20/22</option>
+                                        </select>
+                                    </div>
+                                    <div class="npm">
+                                        <label for="npm" class="mb-3 text-sm font-medium text-gray-900">NPM</label>
+                                        <input
+                                            class="block mt-1 p-2.5 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary"
+                                            id=""
+                                            type="text"
+                                        />
+                                    </div>
                                     <div class="nama md:col-span-2">
                                         <label for="nama" class="mb-3 text-sm font-medium text-gray-900">Nama Lengkap</label>
                                         <input
-                                            class="block p-2.5 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary"
+                                            class="block mt-1 p-2.5 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary"
                                             id="nama"
                                             type="text"
+                                        />
+                                    </div>
+                                    <div class="tempat md:col-span-2">
+                                        <label for="tempat" class="mb-3 text-sm font-medium text-gray-900">Tempat Lahir</label>
+                                        <input
+                                            class="block mt-1 p-2.5 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary"
+                                            id="tempat"
+                                            type="text"
+                                        />
+                                    </div>
+                                    <div class="tanggal">
+                                        <label for="tanggal" class="block mb-2 text-sm font-medium text-gray-900">Tanggal Lahir</label>
+                                        <input
+                                            class="block p-2.5 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary"
+                                            id="tanggal"
+                                            type="date"
                                         />
                                     </div>
                                     <div class="gender md:mb-5">
@@ -358,22 +396,6 @@
                                             <option>Laki-laki</option>
                                             <option>Perempuan</option>
                                         </select>
-                                    </div>
-                                    <div class="tempat">
-                                        <label for="tempat" class="mb-3 text-sm font-medium text-gray-900">Tempat Lahir</label>
-                                        <input
-                                            class="block p-2.5 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary"
-                                            id="tempat"
-                                            type="text"
-                                        />
-                                    </div>
-                                    <div class="tanggal">
-                                        <label for="tanggal" class="block mb-2 text-sm font-medium text-gray-900">Tanggal Lahir</label>
-                                        <input
-                                            class="block p-2.5 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary"
-                                            id="tanggal"
-                                            type="date"
-                                        />
                                     </div>
                                     <div class="agama">
                                         <label for="agama" class="block mb-2 text-sm font-medium text-gray-900">Agama</label>
@@ -408,6 +430,16 @@
                                             id="email"
                                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
                                             placeholder="name@gmail.com"
+                                            required
+                                        />
+                                    </div>
+                                    <div class="emailAff md:mb-3">
+                                        <label for="emailAff" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Affiliasi</label>
+                                        <input
+                                            type="emailAff"
+                                            id="emailAff"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
+                                            placeholder="npm.name@gmail.com"
                                             required
                                         />
                                     </div>

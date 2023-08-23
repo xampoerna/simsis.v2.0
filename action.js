@@ -7,41 +7,63 @@ const jurnalContent = document.getElementById("jurnal-content");
 tugasAkhirLink.addEventListener("click", () => {
     tugasAkhirContent.classList.remove("hidden");
     jurnalContent.classList.add("hidden");
-    tugasAkhirLink.classList.add("text-primary");
-    tugasAkhirLink.classList.remove("text-secondary");
-    jurnalLink.classList.remove("text-primary");
-    jurnalLink.classList.add("text-secondary");
+    tugasAkhirLink.classList.add("bg-primary");
+    tugasAkhirLink.classList.remove("bg-secondary");
+    jurnalLink.classList.remove("bg-primary");
+    jurnalLink.classList.add("bg-secondary");
 });
 
 jurnalLink.addEventListener("click", () => {
     tugasAkhirContent.classList.add("hidden");
     jurnalContent.classList.remove("hidden");
-    tugasAkhirLink.classList.remove("text-primary");
-    tugasAkhirLink.classList.add("text-secondary");
-    jurnalLink.classList.add("text-primary");
-    jurnalLink.classList.remove("text-secondary");
+    tugasAkhirLink.classList.remove("bg-primary");
+    tugasAkhirLink.classList.add("bg-secondary");
+    jurnalLink.classList.add("bg-primary");
+    jurnalLink.classList.remove("bg-secondary");
 });
 
 // Action Reset in Journal
-const resetButton1 = document.getElementById("reset-button1");
-const resetButton2 = document.getElementById("reset-button2");
-const titleInput1 = document.getElementById("title1");
-const titleInput2 = document.getElementById("title2");
-const avatarInput = document.getElementById("user_avatar1");
-const publikasi = document.getElementById("pubs");
-const url = document.getElementById("url");
+const resetArtikel = document.getElementById("resetArtikel");
+const resetTA = document.getElementById("resetTA");
 
-// Reset Button in Journal
-resetButton1.addEventListener("click", () => {
-    titleInput1.value = ""; // Mengatur input judul menjadi kosong
-    avatarInput.value = ""; // Mengatur input file menjadi kosong
+const judulArtikel = document.getElementById("judulArtikel");
+const dosbim1Artikel = document.getElementById("dosbim1Artikel");
+const dosbim2Artikel = document.getElementById("dosbim2Artikel");
+const dosbIngArtikel = document.getElementById("dosbIngArtikel");
+const linkArtikel = document.getElementById("linkArtikel");
+
+const judulTA = document.getElementById("judulTA");
+const dosbim1TA = document.getElementById("dosbim1TA");
+const dosbim2TA = document.getElementById("dosbim2TA");
+const dosbIngTA = document.getElementById("dosbIngTA");
+const fileTA = document.getElementById("fileTA")
+
+// Reset Button in Artikel
+resetArtikel.addEventListener("click", () => {
+    judulArtikel.value = "";
+    dosbim1Artikel.value = "";
+    dosbim2Artikel.value = "";
+    dosbIngArtikel.value = "";
+    linkArtikel.value = "";
 });
 
-resetButton2.addEventListener("click", () => {
-    titleInput2.value = "";
-    publikasi.value = "";
-    url.value = "";
+// Reset Button in TA
+resetArtikel.addEventListener("click", () => {
+    judulTA.value = "";
+    dosbim1TA.value = "";
+    dosbim2TA.value = "";
+    dosbIngTA.value = "";
+    fileTA.value = "";
 });
+
+
+// Action Reset in MBKM
+const resetMBKM = document.getElementById("resetMBKM");
+const sertifMBKM = document.getElementById("sertifMBKM");
+const jenisMBKM = document.getElementById("jenisMBKM");
+const tanggalMBKM = document.getElementById("tanggalMBKM");
+const tahapMBKM = document.getElementById("tahapMBKM");
+const deskripsiMBKM = document.getElementById("deskripsiMBKM");
 
 // Action Reset in Update Mahasiswa
 document.addEventListener("DOMContentLoaded", function () {

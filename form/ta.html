@@ -72,6 +72,13 @@
                         <ul id="dropdown2" class="hidden py-2 space-y-2">
                             <li>
                                 <a
+                                    href="data_mbkm.html"
+                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
+                                    >Data MBKM</a
+                                >
+                            </li>
+                            <li>
+                                <a
                                     href="kelola_profil.html"
                                     class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
                                     >Kelola Profil</a
@@ -87,9 +94,9 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="prestasi.html" id="prestasi">
-                            <i class="bx bx-trophy text-white h-14 text-2xl text-center"></i>
-                            <span class="links_name text-white">Data Prestasi</span>
+                        <a href="prestasi.html" id="prestasi" class="text-white">
+                            <i class="bx bx-trophy h-14 text-2xl text-center"></i>
+                            <span class="links_name">Data Prestasi</span>
                         </a>
                     </li>
                     <li id="button1" class="bg-menus rounded-lg">
@@ -176,30 +183,30 @@
                             <li>
                                 <a
                                     href="gerilya.html"
-                                    class="active flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
+                                    class="flex links_name items-center w-full p-2 text-base font-normal text-white transition duration-75 rounded-lg group hover:text-menus pl-11"
                                     >Kementerian ESDM - GERILYA</a
                                 >
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="dosen_pa.html" id="dosen">
-                            <i class="bx bxs-user-rectangle text-white h-14 text-2xl text-center"></i>
-                            <span class="links_name text-white">Dosen PA</span>
+                        <a href="dosen_pa.html" id="dosen" class="text-white">
+                            <i class="bx bxs-user-rectangle h-14 text-2xl text-center"></i>
+                            <span class="links_name">Dosen PA</span>
                         </a>
                     </li>
                     <li>
-                        <a href="journal.html" id="journal">
-                            <i class="bx bx-bookmark-alt text-white h-14 text-2xl text-center"></i>
-                            <span class="links_name text-white">TA | Artikel Ilmiah</span>
+                        <a href="journal.html" id="journal" class="active">
+                            <i class="bx bx-bookmark-alt h-14 text-2xl text-center"></i>
+                            <span class="links_name">TA | Artikel Ilmiah</span>
                         </a>
                     </li>
                 </ul>
             </div>
             <!-- Sidebar End -->
 
-            <!-- Section Start -->
-            <section class="home-section content">
+            <!-- Main Section Start -->
+            <main class="home-section content">
                 <!-- Navbar Start -->
                 <nav class="bg-secondary border-b-4 rounded-b-lg border-gray-300 dark:bg-gray-900">
                     <div class="flex flex-wrap justify-between items-center mx-auto p-4">
@@ -250,121 +257,93 @@
                 <!-- Navbar End -->
 
                 <!-- Section Content Start -->
-                <div class="w-full md:w-11/12 mx-auto">
+                <section class="w-full md:w-11/12 mx-auto">
                     <!-- Back Beranda Start -->
-                    <div class="my-3 p-4 font-medium rounded-t-lg rounded-b-md border-b-2 border-gray-300">
-                        <div class="">
-                            <a href="../index.html" class="text-primary hover:text-black">Mahasiswa</a>
-                            <span>| Politeknik Piksi Ganesha |</span>
-                            <a href="gerilya.html" class="text-secondary hover:text-black">Gerilya</a>
-                        </div>
+                    <div class="mt-3 mb-5 p-4 font-medium rounded-t-lg rounded-b-md border-b-2 border-gray-300">
+                        <a href="../index.html" class="text-primary hover:text-black">Mahasiswa</a>
+                        <span>| Politeknik Piksi Ganesha |</span>
+                        <a href="journal.html" class="text-secondary hover:text-black"><span class="text-primary hover:text-black">Tugas Akhir</span>/Artikel Ilmiah</a>
                     </div>
                     <!-- Back Beranda End -->
 
-                    <!-- Section Carousel Start -->
-                    <section class="w-full mt-10">
-                        <div id="default-carousel" class="relative w-full" data-carousel="slide">
-                            <!-- Carousel wrapper -->
-                            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                                <!-- Item 1 -->
-                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <img src="../media/1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="carousel image" />
+                    <section class="mb-10 p-7 border border-gray-200 rounded-xl shadow-lg">
+                        <!-- Content Start -->
+                        <div class="w-full px-2 md:px-0">
+                            <h4 class="font-medium px-3 mb-3">Form Update dan Tambah Data Tugas Akhir DIII</h4>
+                            <form id="formTA" class="px-3 md:px-6 border border-gray-300 py-8 rounded-xl shadow-md">
+                                <div class="grid md:grid-cols-3 gap-4">
+                                    <div class="judulTA md:col-span-3">
+                                        <label for="judulTA" class="mb-3 text-sm font-medium text-gray-900"
+                                            >Judul Tugas Akhir <i class="text-sm font-normal">[tambahkan tahun terbit]</i></label
+                                        >
+                                        <input
+                                            id="judulTA"
+                                            type="text"
+                                            class="block p-2.5 mt-2 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary"
+                                        />
+                                    </div>
+                                    <div class="dosbim1TA">
+                                        <label for="dosbim1TA" class="mb-3 text-sm font-medium text-gray-900">Dosen Pembimbing 1</label>
+                                        <input
+                                            id="dosbim1TA"
+                                            type="text"
+                                            class="block p-2.5 mt-2 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary"
+                                        />
+                                    </div>
+                                    <div class="dosbim2TA">
+                                        <label for="dosbim2TA" class="mb-3 text-sm font-medium text-gray-900">Dosen Pembimbing 2</label>
+                                        <input
+                                            id="dosbim2TA"
+                                            type="text"
+                                            class="block p-2.5 mt-2 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary"
+                                        />
+                                    </div>
+                                    <div class="dosbIngTA">
+                                        <label for="dosbIngTA" class="mb-3 text-sm font-medium text-gray-900"
+                                            >Dosen Pembimbing Bahasa Inggris <i class="text-sm font-normal">[optional]</i></label
+                                        >
+                                        <input
+                                            id="dosbIngTA"
+                                            type="text"
+                                            class="block p-2.5 mt-2 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary"
+                                        />
+                                    </div>
+                                    <div class="fileTA md:col-span-2">
+                                        <label for="fileTA" class="mb-3 text-sm font-medium text-gray-900">Upload File Tugas Akhir</label>
+                                        <input
+                                            class="block p-2.5 mt-2 w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:ring-secondary"
+                                            aria-describedby="user_avatar_help"
+                                            id="fileTA"
+                                            type="file"
+                                        />
+                                    </div>
                                 </div>
-                                <!-- Item 2 -->
-                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <img src="../media/2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="carousel image" />
-                                </div>
-                                <!-- Item 3 -->
-                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <img src="../media/3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="carousel image" />
-                                </div>
-                            </div>
-                            <!-- Text in Silder -->
-                            <div class="absolute z-30 bottom-5 ml-5">
-                                <h3 class="font-medium text-lg md:text-2xl text-white">PROGRAM MBKM KEMENDIKBUD</h3>
-                                <h3 class="font-medium text-xl md:text-3xl text-white">GERILYA</h3>
-                            </div>
-                            <!-- Slider controls -->
-                            <button
-                                type="button"
-                                class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                                data-carousel-prev
-                            >
-                                <span
-                                    class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-                                >
-                                    <svg
-                                        aria-hidden="true"
-                                        class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg"
+                                <div class="flex flex-wrap justify-end mt-7">
+                                    <button
+                                        type="submit"
+                                        class="mt-3 p-2 w-20 md:w-32 font-medium bg-secondary text-white rounded-lg hover:font-semibold hover:shadow-lg hover:underline"
                                     >
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                                    </svg>
-                                    <span class="sr-only">Previous</span>
-                                </span>
-                            </button>
-                            <button
-                                type="button"
-                                class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                                data-carousel-next
-                            >
-                                <span
-                                    class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-                                >
-                                    <svg
-                                        aria-hidden="true"
-                                        class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg"
+                                        Simpan
+                                    </button>
+                                    <button
+                                        type="reset"
+                                        id="resetTA"
+                                        class="mx-2 mt-3 p-2 w-20 md:w-32 font-medium bg-primary text-white rounded-lg hover:font-semibold hover:shadow-lg hover:underline"
                                     >
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                    <span class="sr-only">Next</span>
-                                </span>
-                            </button>
+                                        Reset
+                                    </button>
+                                    <button type="menu" class="mt-3 p-2 w-20 md:w-32 font-medium bg-blue-600 text-white rounded-lg hover:font-semibold hover:shadow-lg">
+                                        <a href="../pages/journal.html" class="p-3 hover:underline">Batal</a>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
+                        <!-- Content End -->
                     </section>
-                    <!-- Section Carousel End -->
-
-                    <!-- Content Start -->
-                    <div class="w-full my-10">
-                        <h2 class="px-3 mb-2 font-bold text-2xl md:px-0">Gerakan Inisiatif Listrik Tenaga Surya (Gerilya)</h2>
-                        <p class="text-justify mb-1 px-3 md:px-0">
-                            Program Magang dan Studi Independen Bersertifikat (MSIB) Gerakan Inisiatif Listrik Tenaga Surya (GERILYA) merupakan program yang disiapkan oleh
-                            Kementerian Energi dan Sumber Daya Mineral untuk diimplementasikan pada Merdeka Belajar Kampus Merdeka Kementerian Pendidikan Kebudayaan, Riset dan
-                            Teknologi.
-                        </p>
-                        <p class="text-justify mb-1 px-3 md:px-0">
-                            MSIB Gerilya adalah program magang yang diakselerasikan dengan pengalaman belajar yang dirancang dan dibuat khusus berdasarkan tantangan nyata yang
-                            dihadapi oleh mitra/industri.
-                        </p>
-                        <p class="text-justify mb-1 px-3 md:px-0">
-                            MSIB Gerilya menyediakan ruang bagi mahasiswa untuk mendapatkan pengalaman dalam mengetahui dunia profesi dan menciptakan tenaga kerja yang professional
-                            khususnya di bidang industri energi terbarukan. Mahasiswa yang hendak lulus disediakan tempat dan program pengembangan untuk memasuki dunia kariernya.
-                        </p>
-                        <p class="text-justify mb-6 px-3 md:px-0">
-                            GERILYA ditujukan bagi mahasiswa eksakta minimal semester-6 untuk mengikuti studi independen yang setara dengan 10-20 SKS (tergantung persetujuan
-                            Universitas).
-                        </p>
-
-                        <a
-                            href="https://www.esdm.go.id/id/page/gerilya/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="mx-3 p-3 bg-secondary rounded-lg text-white md:mx-0 hover:shadow-xl hover:font-medium"
-                            >Selengkapnya</a
-                        >
-                    </div>
-                    <!-- Content End -->
-                </div>
+                </section>
                 <!-- Section Content End -->
-            </section>
-            <!-- Section End -->
+            </main>
+            <!-- Main Section End -->
 
             <!-- Footer Start -->
             <footer class="home-section flex-shrink-0 border-b-2 border-gray-300 bg-secondary p-4 rounded-t-md">
@@ -379,4 +358,5 @@
         </div>
     </body>
     <script src="../script.js"></script>
+    <script src="../action.js"></script>
 </html>
